@@ -24,12 +24,23 @@ def main():
         raise Exception
     except Exception as e:
         logger.exception(f'Exception catched! {e}')
+        # Если нужно после логирования остановить работу программы,
+        # то можно заново выбросить исключение:
+        # raise e
 
     # Тестовая библиотека, демонстрирующая работу логгера в нескольких файлах
+    # выполняется логика в mylib/__init__.py
     import mylib
 
 
 if __name__ == "__main__":
+    # Загрузка конфигов
+
+    # Конфиги можно устанавливать через метод .basicConfig(), через метод .dictConfig() из словаря python,
+    # либо загружать из файла конфига формата .conf.
+    # Также с помощью .dictConfig() можно загружать из любых форматов, которые можно преобразовать 
+    # в словарь python: JSON, yaml и т.д.
+
     # Загружаем .conf конфиг
     logging.config.fileConfig('configs/logger.conf')
 
