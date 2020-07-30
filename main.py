@@ -51,7 +51,7 @@ if __name__ == "__main__":
 
     # Заргузка конфига в виде python dict
     # Этот конфиг переопределит предыдущий
-    from settings import LOGGING
+    from configs.settings import LOGGING
     logging.config.dictConfig(LOGGING)
 
     main()
