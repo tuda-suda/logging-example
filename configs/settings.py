@@ -6,10 +6,9 @@ LOGGING = {
             "class": "logging.StreamHandler",
             "level": "DEBUG",
             "formatter": "simple",
-            "stream": "ext://sys.stdout"
         },
         "fileHandler": {
-            "class": "logging.handlers.RotatingFileHandler",
+            "class": "logging.FileHandler",
             "level": "INFO",
             "formatter": "verbose",
             "filename": "py-dict.log"

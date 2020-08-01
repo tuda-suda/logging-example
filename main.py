@@ -1,7 +1,7 @@
 import logging
 import logging.config
 
-# Вспомогательная функция, заггружает файл конфига в формате JSON
+# Вспомогательная функция, загружает файл конфига в формате JSON
 from utils import get_json_conf
 
 
@@ -36,6 +36,7 @@ def main():
 if __name__ == "__main__":
     # Загрузка конфигов
 
+
     # Конфиги можно устанавливать через метод .basicConfig(), через метод .dictConfig() из словаря python,
     # либо загружать из файла конфига формата .conf.
     # Также с помощью .dictConfig() можно загружать из любых форматов, которые можно преобразовать 
@@ -46,8 +47,7 @@ if __name__ == "__main__":
 
     # Загружаем JSON конфиг
     # Этот конфиг переопределит предыдущий
-    log_config = get_json_conf()
-    logging.config.dictConfig(log_config)
+    logging.config.dictConfig(get_json_conf())
 
     # Заргузка конфига в виде python dict
     # Этот конфиг переопределит предыдущий
